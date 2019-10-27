@@ -1,0 +1,12 @@
+numpy
+matplotlib
+pandas==0.24.2
+pyaml==19.4.1
+psycopg2==2.7.6.1
+requests==2.22.0
+pymssql==2.1.4
+mysql-connector-python
+jupyterlab
+keras
+sklearn
+tensorflow
