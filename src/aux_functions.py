@@ -9,7 +9,7 @@ def readConfig():
 
 def getData(db,current_team):
 
-    sql_query = "select * from football_germany where (home='" + current_team + "' or visitor='" + current_team + "') order by season asc, matchday asc"
+    sql_query = "select * from football_germany where (home='" + current_team + "' or visitor='" + current_team + "') and 'season>='1981-82' order by season asc, matchday asc"
 
     print("Getting " + current_team + " data...")
     data = db.query(sql_query)
@@ -65,7 +65,7 @@ def getData(db,current_team):
 
 def getDataBetween(db,team_home,team_visitor):
 
-    sql_query = "select * from football_germany where (home='" + team_home + "' and visitor='" + team_visitor + "') OR (home='" + team_visitor + "' and visitor='" + team_home + "') order by season asc, matchday asc"
+    sql_query = "select * from football_germany where (home='" + team_home + "' and visitor='" + team_visitor + "') OR (home='" + team_visitor + "' and visitor='" + team_home + "') and 'season>='1981-82' order by season asc, matchday asc"
 
     print("Getting " + team_home + " vs " + team_visitor + " data...")
     data = db.query(sql_query)
